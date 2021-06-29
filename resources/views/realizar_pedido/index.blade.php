@@ -104,10 +104,10 @@
                                     <span class="font-weight-bold float-right" style="font-size: 22px;">Total: <span id="total-pedido">$0.00</span></span><br><br>
                                     <small class="float-right">Costo aproximado,</small><br>
                                     <small class="float-right">este es el precio base sin flete.</small><br>
-                                    <a class="float-right" href="https://wa.link/p5oahu">
+                                    <a class="float-right" target="_blank" href="https://wa.link/3a8znv">
                                         <div class="row align-items-center">
                                             <i class="col-auto px-0 mdi mdi-whatsapp" style="font-size: 30px; color: #06d755;"></i>
-                                            <span class="col pl-2">+52 1 33 3477 1410</span>
+                                            <span class="col pl-2">+52 1 33 2968 8853</span>
                                         </div>                                            
                                     </a>
                                 </div>

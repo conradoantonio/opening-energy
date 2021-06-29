@@ -444,7 +444,8 @@ class PedidosController extends Controller
                 'Fecha de entrega', 
                 'Producto', 
                 'Cantidad', 
-                'Costo', 'Flete', 
+                'Costo', 
+                'Flete', 
                 'Total flete', 
                 'Total', 
                 'Estado', 
@@ -455,7 +456,7 @@ class PedidosController extends Controller
                 'Folio factura', 
                 'Litros totales', 
                 'Total de la factura', 
-                'Folio nota de crédito'. 
+                'Folio nota de crédito',
                 'Litros totales NC', 
                 'Total nota de crédito', 
                 'Observaciones de facturación', 

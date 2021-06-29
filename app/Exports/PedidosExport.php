@@ -42,7 +42,7 @@ class PedidosExport implements FromArray, WithTitle, ShouldAutoSize, WithEvents
                 }
             	
                 foreach ($this->encabezados as $value) {
-                    $event->sheet->getStyle('A'.$value.':AC'.$value)->applyFromArray([
+                    $event->sheet->getStyle('A'.$value.':AD'.$value)->applyFromArray([
                         'font' => [
                             'bold' => true
                         ],
