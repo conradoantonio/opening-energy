@@ -6,7 +6,7 @@
     @if (Auth::user()->tipo_usuario === 1)
     <div class="form-row">        
         <div class="form-group col-md-6">
-            <label>Confirmación de precio</label>
+            <label>Confirmación de precio ($)</label>
             <input type="number" id="confirmacion_precio" value="0" name="confirmacion_precio" data-msg="Confirmación de precio" class="form-control not-empty fixed4" required/>
         </div>
     </div>
@@ -37,7 +37,7 @@
             <input type="number" class="form-control fixed4" {{Auth::user()->tipo_usuario === 1 ? '' : 'disabled'}} name="litros_totales" placeholder="Litros totales" data-msg="Litros totales" >
         </div>
         <div class="form-group col-md-6">
-            <label>Total de la factura</label>
+            <label>Total de la factura ($)</label>
             <input type="number" class="form-control fixed4" {{Auth::user()->tipo_usuario === 1 ? '' : 'disabled'}} name="total_factura" placeholder="Total de la factura" data-msg="Total de la factura" >
         </div>
     </div>
@@ -67,7 +67,7 @@
             <input type="number" class="form-control fixed4" {{Auth::user()->tipo_usuario === 1 ? '' : 'disabled'}} name="litros_totales_nc" placeholder="Litros totales NC" data-msg="Litros totales NC" >
         </div>
         <div class="form-group col-md-6">
-            <label>Total nota de crédito</label>
+            <label>Total nota de crédito ($)</label>
             <input type="number" class="form-control fixed4" {{Auth::user()->tipo_usuario === 1 ? '' : 'disabled'}} name="total_nota_credito" placeholder="Total nota de crédito" data-msg="Total nota de crédito" >
         </div>
     </div>
