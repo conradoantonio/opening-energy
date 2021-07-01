@@ -8,6 +8,7 @@ use \App\User;
 use \App\Producto;
 use \App\UserProducto;
 use \App\Direcciones;
+use \App\Pedido;
 
 use Illuminate\Http\Request;
 
@@ -176,7 +177,13 @@ class UserController extends Controller
 
             if (! $item ) { return response(['msg' => 'No se encontró el registro a eliminar', 'status' => 'error', 'url' => url('clientes')], 404); }
 
-            $item->delete();
+            $item2 = Pedido::where('user_id', $item->id)->first();
+
+            if ( $item2 ) { 
+                return response(['msg' => 'No es posible eliminar el cliente, debido a que existen pedidos realizados con este cliente.', 'status' => 'error', 'url' => url('clientes')], 404); 
+            } else {
+                $item->delete();
+            }
 
             return response(['msg' => 'Éxito eliminando '.$msg, 'url' => url('clientes'), 'status' => 'success'], 200);
         } else { 
