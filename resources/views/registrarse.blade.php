@@ -38,52 +38,52 @@
 <main class="admin-main  ">
     <div class="container-fluid">
         <div class="row ">
-            <div class="col-lg-4  bg-white">
+            <div class="col-lg-4" style="background-color: #404040;">
                 <div class="row align-items-center m-h-100">
                     <div class="mx-auto col-md-8">
                         <div class="row">
                             <div class="col"></div>
-                            <div class="col-auto rounded mb-3" style="padding: 10px; background-color: #212841;">
-                                <img src="{{asset('/img/logo.png')}}" width="120" alt="">
+                            <div class="col-auto rounded mb-3" style="padding: 10px; text-align: center;">
+                                <img src="{{asset('/img/logo-login.png')}}" style="width: 60%;" alt="">
                             </div>
                             <div class="col"></div>
                         </div>
-                        <h3 class="text-center p-b-20 fw-400">Registrate</h3>
+                        <h3 class="text-center p-b-20 fw-400" style="color: #e9642b;">Registrate</h3>
                         <form id="form-data" onsubmit="return false;"  class="needs-validation" action="/clientes/save" enctype="multipart/form-data" method="POST" autocomplete="off" data-ajax-type="ajax-form" data-column="0" data-refresh="redirect" data-redirect="true" data-table_id="example3" data-container_id="table-container" data-keepModal="true">
                             @csrf
                             <div class="form-row d-none">
                                 <div class="form-group col-12">
-                                    <label>registo</label>
+                                    <label style="color: #e9642b;">registo</label>
                                     <input type="text" class="form-control" name="registro" value="si">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-12">
-                                    <label>Nombre</label>
+                                    <label style="color: #e9642b;">Nombre</label>
                                     <input type="text" class="form-control not-empty" name="nombre" placeholder="Nombre" data-msg="Nombre">
                                 </div>
                             </div>
                             <div class="form-row">        
                                 <div class="form-group col-12">
-                                    <label>Correo electrónico</label>
+                                    <label style="color: #e9642b;">Correo electrónico</label>
                                     <input type="email" id="email" name="email" data-msg="Correo electrónico" class="form-control not-empty email"/>
                                 </div>        
                             </div>
 
                             <div class="form-row">        
                                 <div class="form-group col-md-6">
-                                    <label>Contraseña</label>
+                                    <label style="color: #e9642b;">Contraseña</label>
                                     <input type="password" id="password" name="password" data-msg="Contraseña" class="form-control not-empty confirm"/>
                                 </div>      
                                 <div class="form-group col-md-6">
-                                    <label>Confirmar contraseña</label>
+                                    <label style="color: #e9642b;">Confirmar contraseña</label>
                                     <input type="password" id="password_confirm" name="password_confirm" data-msg="Confirmar contraseña" class="form-control"/>
                                 </div>   
                             </div>
 
                             <div class="form-row">        
                                 <div class="form-group col-md-6">
-                                    <label>Teléfono</label>
+                                    <label style="color: #e9642b;">Teléfono</label>
                                     <input type="number" id="telefono" name="telefono" data-msg="Teléfono" class="form-control not-empty numeric"/>
                                 </div> 
                             </div>
@@ -95,8 +95,8 @@
 
                 </div>
             </div>
-            <div class="col-lg-8 d-none d-md-block bg-cover" style="background-image: url({{asset('img/bg-login.jpg')}});">
-
+            <div class="col-lg-8 d-none d-md-block" style="text-align: right; background-color: #404040; padding-right: 0;">
+                <img style="max-width: 100%; max-height: 100vh;" src="{{asset('img/bg-login.jpg')}}"></img>
             </div>
         </div>
     </div>

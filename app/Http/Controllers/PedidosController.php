@@ -171,21 +171,21 @@ class PedidosController extends Controller
 
         
 
-        /*Mail::send('mails.pedido', ['content' => $params], function ($message) use($params)
+        Mail::send('mails.pedido', ['content' => $params], function ($message) use($params)
         {
             $message->to($params['email']);
             $message->from(env('MAIL_USERNAME'), 'ENERGY OPENING');
             $message->subject('ENERGY OPENING | '.$params['subject']);
         });
 
-        $params['email'] = explode(",", 'pedidos@energyopening.mx');
+        $params['email'] = explode(",", 'cvelasco@energyopening.mx,mvelasco@energyopening.mx,direccion@energyopening.mx,atencionaclientes@energyopening.mx,infomorelia@energyopening.mx, pedidos@energyopening.com,aislas@energyopening.mx');
 
         Mail::send('mails.pedido', ['content' => $params], function ($message) use($params)
         {
             $message->to($params['email']);
             $message->from(env('MAIL_USERNAME'), 'ENERGY OPENING');
             $message->subject('ENERGY OPENING | '.$params['subject']);
-        });*/
+        });
 
         DB::commit();
         return response(['msg' => 'Registro enviado correctamente', 'url' => url('pedidos'), 'status' => 'success'], 200);
