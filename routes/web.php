@@ -21,6 +21,12 @@ Route::get('/registrarse', function () {
     return view('registrarse');
 })->name('registrarse');
 
+#Mi perfil
+// Route::middleware(['role:Administrador'])->prefix('mi-perfil')->group(function () {
+    Route::get('mi-perfil', 'MiPerfilController@index');
+    Route::post('mi-perfil/update', 'MiPerfilController@update');
+// });
+
 #Route url
 Route::post('login', 'LoginController@index');
 

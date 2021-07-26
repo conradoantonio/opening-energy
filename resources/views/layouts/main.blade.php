@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="{{ asset('vendor/pace/pace.css') }}">
         <script src="{{ asset('vendor/pace/pace.min.j') }}s"></script>
         <!--vendors-->
+        <link rel="stylesheet" type="text/css" href="https://rawgit.com/noppa/text-security/master/dist/text-security.css">
         <link rel="stylesheet" type="text/css" href="{{ asset('vendor/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('vendor/jquery-scrollbar/jquery.scrollbar.css') }}">
         <link rel="stylesheet" href="{{ asset('vendor/select2/css/select2.min.css') }}">
@@ -78,6 +79,18 @@
             </div>
             <div class="admin-sidebar-wrapper js-scrollbar">
                 <ul class="menu">
+                    @if (Auth::user()->tipo_usuario === 1)
+                    <li class="menu-item {{ in_array($menu, ['Mi perfil']) ? 'active opened' : ''}}">
+                        <a href="{{url('mi-perfil')}}" class="menu-link">
+                            <span class="menu-label">
+                                <span class="menu-name">Mi perfil</span>
+                            </span>
+                            <span class="menu-icon">
+                                <i class="icon-placeholder mdi mdi-account"></i>
+                            </span>
+                        </a>
+                    </li>
+                    @endif
                     @if (Auth::user()->tipo_usuario === 1)
                     <li class="menu-item {{ in_array($menu, ['Productos']) ? 'active' : ''}}">
                         <a href="/productos" class="menu-link">

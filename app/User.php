@@ -51,4 +51,18 @@ class User extends Authenticatable
         return $this->hasMany(Direcciones::Class, "user_id", "id");
     }
 
+    /**
+     * Check the role of the current user.
+     *
+     */
+    public function checkRole($roles)
+    {
+        foreach ( $roles as $role ) {
+            if ( $this->role->descripcion == $role ) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

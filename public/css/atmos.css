@@ -17331,7 +17331,7 @@ table tbody tr.selected:hover {
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("/img/bg-title.jpg");
+    background-image: url("/img/bg-title.png");
     background-position: center;
 }
 
