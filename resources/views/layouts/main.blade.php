@@ -28,7 +28,7 @@
         <!--Material Icons-->
         <link rel="stylesheet" type="text/css" href="{{ asset('fonts/materialdesignicons/materialdesignicons.min.css') }}">
         <!--Bootstrap + atmos Admin CSS-->
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/atmos.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/atmos.css?v=1.1') }}">
         <!-- Additional library for page -->
         <link rel="stylesheet" href="{{ asset('css/sweetalert.css') }}">
 
@@ -135,6 +135,18 @@
                             </span>
                         </a>
                     </li>
+                    @if (Auth::user()->tipo_usuario === 1)
+                        <li class="menu-item {{ in_array($menu, ['Administradores']) ? 'active' : ''}}">
+                            <a href="/administradores" class="menu-link">
+                                <span class="menu-label">
+                                    <span class="menu-name">Usuarios administradores</span>
+                                </span>
+                                <span class="menu-icon">
+                                    <i class="icon-placeholder mdi mdi-account-supervisor"></i>
+                                </span>
+                            </a>
+                        </li>
+                    @endif
                     <li class="menu-item {{ in_array($menu, ['Encuesta de servicios']) ? 'active' : ''}}">
                         <a href="/encuesta" class="menu-link">
                             <span class="menu-label">

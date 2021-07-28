@@ -57,6 +57,12 @@ Route::post('/unidades/save', 'UnidadesController@save');
 Route::post('/unidades/update', 'UnidadesController@update');
 Route::post('/unidades/delete', 'UnidadesController@delete');
 
+//Usuarios
+Route::get('/administradores', 'AdministradoresController@index');
+Route::post('/administradores/save', 'AdministradoresController@save');
+Route::post('/administradores/update', 'AdministradoresController@update');
+Route::post('/administradores/delete', 'AdministradoresController@delete');
+
 //pedidos
 Route::get('/pedidos', 'PedidosController@index');
 Route::post('/pedidos/update', 'PedidosController@update');

@@ -14,7 +14,7 @@
                                         <img src="{{asset('/img/logo.png')}}" width="140" alt="">
                                     </div>
                                     <div class="col">
-                                        <p class="opacity-75 mb-0">
+                                        <p class="opacity-75 mb-0 mt-4">
                                             En Energy Opening estamos comprometidos a ofrecer la más alta calidad en todos nuestros productos, garantizando la satisfacción de nuestros clientes. <br><br>                                      
                                         </p>
                                         <!--<ul class="opacity-75">

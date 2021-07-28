@@ -178,7 +178,7 @@ class PedidosController extends Controller
             $message->subject('ENERGY OPENING | '.$params['subject']);
         });
 
-        $params['email'] = explode(",", 'cvelasco@energyopening.mx,mvelasco@energyopening.mx,direccion@energyopening.mx,atencionaclientes@energyopening.mx,infomorelia@energyopening.mx, pedidos@energyopening.com,aislas@energyopening.mx');
+        $params['email'] = explode(",", 'cvelasco@energyopening.mx,mvelasco@energyopening.mx,direccion@energyopening.mx,atencionaclientes@energyopening.mx,infomorelia@energyopening.mx,pedidos@energyopening.com,aislas@energyopening.mx');
 
         Mail::send('mails.pedido', ['content' => $params], function ($message) use($params)
         {
