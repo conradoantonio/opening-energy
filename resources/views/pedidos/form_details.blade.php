@@ -30,6 +30,10 @@
             <label>Folio factura</label>
             <input type="text" class="form-control" {{Auth::user()->tipo_usuario === 1 ? '' : 'disabled'}} name="folio_factura" placeholder="Folio factura" data-msg="Folio factura" >
         </div>
+        <div class="form-group col-md-12">
+            <label>Factura complemento</label>
+            <input type="text" class="form-control" {{Auth::user()->tipo_usuario === 1 ? '' : 'disabled'}} name="complemento_factura" placeholder="Factura complemento" data-msg="Factura complemento" >
+        </div>
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
@@ -59,6 +63,12 @@
         <div class="form-group col-md-12">
             <label>Folio nota de crédito</label>
             <input type="text" class="form-control" {{Auth::user()->tipo_usuario === 1 ? '' : 'disabled'}} name="folio_nota_credito" placeholder="Folio nota de crédito" data-msg="Folio nota de crédito">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-12">
+            <label>Nota de crédito complemento</label>
+            <input type="text" class="form-control" {{Auth::user()->tipo_usuario === 1 ? '' : 'disabled'}} name="complemento_nota_credito" placeholder="Nota de crédito complemento" data-msg="Nota de crédito complemento">
         </div>
     </div>
     <div class="form-row">

@@ -276,6 +276,7 @@ class PedidosController extends Controller
             $docPed->tracking                   = $req->tracking;
             $docPed->fecha_factura              = $req->fecha_factura;
             $docPed->folio_factura              = $req->folio_factura;
+            $docPed->complemento_factura        = $req->complemento_factura;
             $docPed->litros_totales             = $req->litros_totales;
             $docPed->total_factura              = $req->total_factura;
             
@@ -287,6 +288,7 @@ class PedidosController extends Controller
             }            
             
             $docPed->folio_nota_credito         = $req->folio_nota_credito;
+            $docPed->complemento_nota_credito   = $req->complemento_nota_credito;
             $docPed->litros_totales_nc          = $req->litros_totales_nc;
             $docPed->total_nota_credito         = $req->total_nota_credito;
 
@@ -454,9 +456,11 @@ class PedidosController extends Controller
                 'Tracking', 
                 'Fecha factura', 
                 'Folio factura', 
+                'Complemento factura', 
                 'Litros totales', 
                 'Total de la factura', 
                 'Folio nota de crédito',
+                'Nota de crédito complemento',
                 'Litros totales NC', 
                 'Total nota de crédito', 
                 'Observaciones de facturación', 
@@ -488,9 +492,11 @@ class PedidosController extends Controller
                         $pedido->documentacion->tracking,
                         $pedido->documentacion->fecha_factura,
                         $pedido->documentacion->folio_factura,
+                        $pedido->documentacion->complemento_factura,
                         number_format($pedido->documentacion->litros_totales,0),
                         '$'.number_format($pedido->documentacion->total_factura, 4),
                         $pedido->documentacion->folio_nota_credito,
+                        $pedido->documentacion->complemento_nota_credito,
                         number_format($pedido->documentacion->litros_totales_nc, 0),
                         '$'.number_format($pedido->documentacion->total_nota_credito, 4),
                         $pedido->documentacion->observaciones_facturacion,

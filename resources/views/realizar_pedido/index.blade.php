@@ -5,35 +5,35 @@
     @include('realizar_pedido.modal')
     <div class=" bg-dark m-b-30 bg-stars">
         <div class="bg-title">
-                    <div class="container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-lg-9 text-white p-t-40 p-b-60">
+                        {{-- <h1>Contactos</h1> --}}
                         <div class="row">
-                            <div class="col-md-10 col-lg-9 text-white p-t-40 p-b-60">
-                                {{-- <h1>Contactos</h1> --}}
-                                <div class="row">
-                                    <div class="col-12 col-md-auto text-center pb-3">
-                                        <img src="{{asset('/img/logo.png')}}" width="140" alt="">
-                                    </div>
-                                    <div class="col">
-                                        <p class="opacity-75 mb-0 mt-4">
-                                            En Energy Opening estamos comprometidos a ofrecer la más alta calidad en todos nuestros productos, garantizando la satisfacción de nuestros clientes. <br><br>                                      
-                                        </p>
-                                        <!--<ul class="opacity-75">
-                                            <li>Aceptamos todas las formas de pago</li>
-                                            <li>Costos Aproximados</li>
-                                            <li>Haz tu pedido hoy y recíbelo mañana</li>
-                                            <li>No cobramos envío</li>
-                                            <li>Mínimo de compra $500 (Gdl y Zapopan) y $1000 (Tlaquepaque, Tonala, Tlajomulco)</li>
-                                        </ul>-->
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div class="d-none col-md-2 col-lg-3 m-auto text-white p-t-40 p-b-90 general-info" data-url="{{url("realizar-pedido")}}" data-refresh="table" data-el-loader="card">
-                                
+                            {{-- <div class="col-12 col-md-auto text-center pb-3">
+                                <img src="{{asset('/img/logo.png')}}" width="140" alt="">
+                            </div> --}}
+                            <div class="col">
+                                <p class="opacity-75 mb-0 mt-4">
+                                    En Energy Opening estamos comprometidos a ofrecer la más alta calidad en todos nuestros productos, garantizando la satisfacción de nuestros clientes. <br><br>                                      
+                                </p>
+                                <!--<ul class="opacity-75">
+                                    <li>Aceptamos todas las formas de pago</li>
+                                    <li>Costos Aproximados</li>
+                                    <li>Haz tu pedido hoy y recíbelo mañana</li>
+                                    <li>No cobramos envío</li>
+                                    <li>Mínimo de compra $500 (Gdl y Zapopan) y $1000 (Tlaquepaque, Tonala, Tlajomulco)</li>
+                                </ul>-->
                             </div>
                         </div>
+                        
+                    </div>
+                    <div class="d-none col-md-2 col-lg-3 m-auto text-white p-t-40 p-b-90 general-info" data-url="{{url("realizar-pedido")}}" data-refresh="table" data-el-loader="card">
+                        
                     </div>
                 </div>
+            </div>
+        </div>
     </div>
 
     <div class="container pull-up">
@@ -102,8 +102,11 @@
                             <div class="content-product mb-3" style="padding-top: 20px">
                                 <div class="">
                                     <span class="font-weight-bold float-right" style="font-size: 22px;">Total: <span id="total-pedido">$0.00</span></span><br><br>
-                                    <small class="float-right">Costo aproximado,</small><br>
-                                    <small class="float-right">este es el precio base sin flete.</small><br>
+                                    <p class="float-right" style="font-size: 20px;">Costo aproximado, este es el precio base sin flete.</p>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    {{-- <small class="float-right" style="font-size: 20px;"></small><br> --}}
                                     <a class="float-right" target="_blank" href="https://wa.link/3a8znv">
                                         <div class="row align-items-center">
                                             <i class="col-auto px-0 mdi mdi-whatsapp" style="font-size: 30px; color: #06d755;"></i>
@@ -113,7 +116,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-12">
+                                <div class="col-sm-12">
                                     <button class="btn btn-primary float-right" data-target="#contForm" id="cont-pedido" disabled>Continuar con el pedido</button>
                                 </div>
                             </div>

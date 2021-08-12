@@ -656,8 +656,8 @@ function setFormDocumentacion(row, target, prefix = false, tipo = 1) {
     }
     $(target).find('input[name=id]').val(row.id);
     $(target).find('input[name=confirmacion_precio]').val(row.productos[0].costo.toFixed(4));
-    $(target).find('input[name=folio_carta_porte], input[name=tracking], input[name=fecha_factura], input[name=folio_factura],'+
-                   'input[name=pdf_factura], input[name=folio_nota_credito], input[name=pdf_nota_credito], input[name=bol_carga],'+
+    $(target).find('input[name=folio_carta_porte], input[name=tracking], input[name=fecha_factura], input[name=folio_factura], input[name=complemento_factura],'+
+                   'input[name=pdf_factura], input[name=folio_nota_credito], input[name=complemento_nota_credito], input[name=pdf_nota_credito], input[name=bol_carga],'+
                    'input[name=observaciones_facturacion], input[name=operador], input[name=tractor], input[name=tanque],'+
                    'input[name=densidad], input[name=bascula], input[name=veeder], input[name=observaciones_descarga],'+
                    'input[name=litros_totales], input[name=total_factura], input[name=litros_totales_nc], input[name=total_nota_credito]').val(null);
@@ -668,11 +668,13 @@ function setFormDocumentacion(row, target, prefix = false, tipo = 1) {
         $(target).find('input[name=tracking]').val(docu.tracking);
         $(target).find('input[name=fecha_factura]').val(docu.fecha_factura);
         $(target).find('input[name=folio_factura]').val(docu.folio_factura);
+        $(target).find('input[name=complemento_factura]').val(docu.complemento_factura);
         if(docu.pdf_factura) {
             $(target).find('.d-file_pdf_factura').show();
             $(target).find('.d-file_pdf_factura .btn-d-file').data('file', docu.pdf_factura);
         }
         $(target).find('input[name=folio_nota_credito]').val(docu.folio_nota_credito);
+        $(target).find('input[name=complemento_nota_credito]').val(docu.complemento_nota_credito);
         if(docu.pdf_nota_credito) {
             $(target).find('.d-file_pdf_nota_credito').show();
             $(target).find('.d-file_pdf_nota_credito .btn-d-file').data('file', docu.pdf_nota_credito);

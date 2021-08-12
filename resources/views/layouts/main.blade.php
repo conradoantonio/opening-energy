@@ -28,7 +28,7 @@
         <!--Material Icons-->
         <link rel="stylesheet" type="text/css" href="{{ asset('fonts/materialdesignicons/materialdesignicons.min.css') }}">
         <!--Bootstrap + atmos Admin CSS-->
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/atmos.css?v=1.1') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/atmos.css?v=1.2') }}">
         <!-- Additional library for page -->
         <link rel="stylesheet" href="{{ asset('css/sweetalert.css') }}">
 
@@ -50,7 +50,7 @@
         <script src="{{ asset('js/systemFunctions.js')}}"></script>
         <script src="{{ asset('js/general-ajax.js')}}"></script>
         <script src="{{ asset('js/validfunctions.js')}}"></script>
-        <script src="{{ asset('js/globalFunctions.js')}}"></script>
+        <script src="{{ asset('js/globalFunctions.js?v=1.1')}}"></script>
         <script src="{{ asset('vendor/blockui/jquery.blockUI.js')}}"></script>
         <script src="{{ asset('vendor/timepicker/bootstrap-timepicker.min.js')}}"></script>
         <script src="{{ asset('js/bootstrap-input-spinner.js')}}"></script>
