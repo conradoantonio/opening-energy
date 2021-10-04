@@ -160,7 +160,7 @@
 
     function getMinDay() {
         var today = new Date();
-        today.setDate(today.getDate() + 2);
+        // today.setDate(today.getDate() + 2);
         var dd = today.getDate();
         var mm = today.getMonth()+1;
         var yyyy = today.getFullYear();

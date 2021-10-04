@@ -84,6 +84,22 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function obtenerDirecciones(Request $req)
+    {
+        if (auth()->check()) {
+            $items = Direcciones::where("user_id", $req->user_id)->get();
+
+            return response(['msg' => 'Direcciones enlistadas a continuación', 'data' => $items, 'status' => 'success'], 200);
+        } else { 
+            return response(['msg' => 'Es necesario estar logueado', 'status' => 'error', 'url' => url('clientes')], 404); 
+        }
+    }
+
+    /**
+     * Save a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function direcciones(Request $req)
     {
         if (auth()->check()) {

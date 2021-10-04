@@ -241,6 +241,31 @@ class PedidosController extends Controller
         }
     }
 
+    public function updateAddress(Request $req)
+    {
+        if (auth()->check()) {
+            DB::beginTransaction();
+            $item = Pedido::find($req->pedido_id);
+            if (! $item ) { return response(['msg' => 'No se encontró el registro a editar', 'status' => 'error', 'url' => url('pedidos')], 404); }
+
+            $direccion = Direccion::where('direccion_id', $req->direccion_id)->first();
+            if (! $direccion ) { return response(['msg' => 'Seleccione una dirección para continuar', 'status' => 'error', 'url' => url('pedidos')], 404); }
+
+            $item->direccion_id = $direccion->id;
+
+            $item->save();
+
+            // Código para recalcular el costo total del pedido!!
+            
+            DB::commit();
+            $items = Pedido::where("id", $req->pedido_id)->with("productos")->with("user")->with('direccion_table')->get();
+
+            return response(['msg' => 'Registro actualizado correctamente', 'url' => url('pedidos'), 'status' => 'success', 'item' => $items], 200);
+        } else { 
+            return response(['msg' => 'Es necesario estar logueado', 'status' => 'error', 'url' => url('pedidos')], 404); 
+        }
+    }
+
     public function updateDocumentacion(Request $req)
     {
         if (auth()->check()) {

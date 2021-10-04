@@ -153,7 +153,7 @@
         @if (Auth::user()->tipo_usuario === 1)
         <div class="form-group col">
             <label>Veeder/Evidencia</label>
-            <input type="file" accept="image/*" class="form-control file image" name="veeder" placeholder="Veeder" data-msg="Veeder" >
+            <input type="file" accept="pdf/image/*" class="form-control file pdf image" name="veeder" placeholder="Veeder" data-msg="Veeder" >
         </div>
         @endif
         <div class="form-group col-auto d-file d-file_veeder">

@@ -47,6 +47,7 @@ Route::post('/productos/delete', 'ProductosController@delete');
 Route::get('/clientes', 'UserController@index');
 Route::post('/clientes/save', 'UserController@save');
 Route::post('/clientes/update/productos', 'UserController@productos');
+Route::post('/clientes/direcciones', 'UserController@obtenerDirecciones');
 Route::post('/clientes/update/direcciones', 'UserController@direcciones');
 Route::post('/clientes/update', 'UserController@update');
 Route::post('/clientes/delete', 'UserController@delete');
@@ -66,6 +67,7 @@ Route::post('/administradores/delete', 'AdministradoresController@delete');
 //pedidos
 Route::get('/pedidos', 'PedidosController@index');
 Route::post('/pedidos/update', 'PedidosController@update');
+Route::post('/pedidos/update/direccion', 'PedidosController@updateAddress');
 Route::post('/pedidos/update/documentacion', 'PedidosController@updateDocumentacion');
 Route::post('/pedidos/documentacion/download', 'PedidosController@downloadDocumentacion');
 Route::get('/pedidos/excel/download', 'PedidosController@downloadExcel');

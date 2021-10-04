@@ -33,6 +33,7 @@
                     @if (Auth::user()->tipo_usuario === 1)
                     <!--<button class="btn btn-primary btn-sm print-row" data-row="{{$item}}" data-toggle="tooltip" data-target="#viewForm" data-placement="top" title="Imprimir"><i class="mdi mdi-printer"></i></button>-->
                     <button class="btn btn-secondary btn-sm details-row" data-row="{{$item}}" data-toggle="tooltip" data-target="#detailsForm" data-placement="top" title="Completar documentación"><i class="mdi mdi-file-document"></i></button>
+                    <button class="btn btn-info btn-sm change-address" data-row="{{$item}}" data-toggle="tooltip" data-target="#detailsForm" data-placement="top" title="Cambiar dirección"><i class="mdi mdi-truck-delivery"></i></button>
                     <button class="btn btn-danger btn-sm delete-row" data-row-id="{{$item->id}}" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="mdi mdi-trash-can"></i></button>
                     @endif
                     <button class="btn btn-dark btn-sm edit-row" data-row="{{$item}}" data-toggle="tooltip" data-target="#viewForm" data-placement="top" title="Ver detalles"><i class="mdi mdi-eye"></i></button>

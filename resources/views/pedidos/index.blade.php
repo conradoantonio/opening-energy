@@ -98,6 +98,33 @@
 </section>
 
 <script type="text/javascript">
+    $('body').delegate('.change-address','click', function(e) {
+        item = $(this).data('row');
+        console.log(item);
+        $('div#modal-cambiar-direccion input[name=pedido_id]').val(item.id);
+        $('div#modal-cambiar-direccion input[name=pedido_folio]').val(item.id);
+
+        config = {
+            "user_id"   : item.user_id,
+            "route"     : '{{url('clientes/direcciones')}}',
+            "keepModal" : true,
+            "callback"  : 'fillSelect'
+        }
+        ajaxSimple(config);
+    });
+
+    function fillSelect(response, config) {
+        items = response.data;
+        items.forEach(function ( option ) {
+            $( 'select#direccion_id' ).append(
+                '<option value="'+option.id+'">'+option.calle+'</option>'
+            );
+        });
+
+        $('div#modal-cambiar-direccion').modal();
+    }
+
+
     $('body').delegate('.print-row','click', function(e) {
         e.stopPropagation();
         var row = $.extend(true, {}, $(this).data('row'));
