@@ -115,9 +115,14 @@
 
     function fillSelect(response, config) {
         items = response.data;
+        $( 'select#direccion_id' ).children().remove();
         items.forEach(function ( option ) {
+            var direccionHtml = option.calle+" "+option.numero_exterior;
+            option.numero_interior ? direccionHtml += " Int. "+ option.numero_interior : '';
+            direccionHtml += " - Col. "+ option.colonia +" - "+ option.municipio +", "+ option.estado +'. C.P: '+ option.codigo_postal;
+            
             $( 'select#direccion_id' ).append(
-                '<option value="'+option.id+'">'+option.calle+'</option>'
+                '<option value="'+option.id+'">'+direccionHtml+'</option>'
             );
         });
 

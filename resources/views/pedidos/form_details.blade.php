@@ -31,7 +31,7 @@
             <input type="text" class="form-control" {{Auth::user()->tipo_usuario === 1 ? '' : 'disabled'}} name="folio_factura" placeholder="Folio factura" data-msg="Folio factura" >
         </div>
         <div class="form-group col-md-12">
-            <label>Factura complemento</label>
+            <label>Folio Factura complemento</label>
             <input type="text" class="form-control" {{Auth::user()->tipo_usuario === 1 ? '' : 'disabled'}} name="complemento_factura" placeholder="Factura complemento" data-msg="Factura complemento" >
         </div>
     </div>
@@ -41,7 +41,7 @@
             <input type="number" class="form-control fixed4" {{Auth::user()->tipo_usuario === 1 ? '' : 'disabled'}} name="litros_totales" placeholder="Litros totales" data-msg="Litros totales" >
         </div>
         <div class="form-group col-md-6">
-            <label>Total de la factura ($)</label>
+            <label>Total de facturas ($)</label>
             <input type="number" class="form-control fixed4" {{Auth::user()->tipo_usuario === 1 ? '' : 'disabled'}} name="total_factura" placeholder="Total de la factura" data-msg="Total de la factura" >
         </div>
     </div>
@@ -61,13 +61,13 @@
     </div>
     <div class="form-row">
         <div class="form-group col-md-12">
-            <label>Folio nota de crédito</label>
+            <label>Folio nota de crédito por descuento</label>
             <input type="text" class="form-control" {{Auth::user()->tipo_usuario === 1 ? '' : 'disabled'}} name="folio_nota_credito" placeholder="Folio nota de crédito" data-msg="Folio nota de crédito">
         </div>
     </div>
     <div class="form-row">
         <div class="form-group col-md-12">
-            <label>Nota de crédito complemento</label>
+            <label>Nota de crédito complemento por faltantes</label>
             <input type="text" class="form-control" {{Auth::user()->tipo_usuario === 1 ? '' : 'disabled'}} name="complemento_nota_credito" placeholder="Nota de crédito complemento" data-msg="Nota de crédito complemento">
         </div>
     </div>
@@ -77,7 +77,7 @@
             <input type="number" class="form-control fixed4" {{Auth::user()->tipo_usuario === 1 ? '' : 'disabled'}} name="litros_totales_nc" placeholder="Litros totales NC" data-msg="Litros totales NC" >
         </div>
         <div class="form-group col-md-6">
-            <label>Total nota de crédito ($)</label>
+            <label>Total notas de crédito ($)</label>
             <input type="number" class="form-control fixed4" {{Auth::user()->tipo_usuario === 1 ? '' : 'disabled'}} name="total_nota_credito" placeholder="Total nota de crédito" data-msg="Total nota de crédito" >
         </div>
     </div>

@@ -248,15 +248,29 @@ class PedidosController extends Controller
             $item = Pedido::find($req->pedido_id);
             if (! $item ) { return response(['msg' => 'No se encontró el registro a editar', 'status' => 'error', 'url' => url('pedidos')], 404); }
 
-            $direccion = Direccion::where('direccion_id', $req->direccion_id)->first();
+            $direccion = Direcciones::where('id', $req->direccion_id)->first();
             if (! $direccion ) { return response(['msg' => 'Seleccione una dirección para continuar', 'status' => 'error', 'url' => url('pedidos')], 404); }
 
-            $item->direccion_id = $direccion->id;
+            $totalPedi = $totalFlete = 0;
+
+            $item->direccion_id  = $direccion->id;
+            $item->direccion     = $direccion->calle;
+            $item->flete         = $direccion->flete;
+            $item->importe_flete = $direccion->importe_flete;
+
+            foreach ( $item->productos as $producto ) {
+                $totalPedi = $producto->total;
+
+                if ( $direccion ) {
+                    $totalFlete = $totalFlete + ( $direccion->importe_flete * $producto->cantidad );
+                }
+            }
+
+            $item->total_flete = $totalFlete;
+            $item->total       = $totalPedi + $totalFlete;
 
             $item->save();
 
-            // Código para recalcular el costo total del pedido!!
-            
             DB::commit();
             $items = Pedido::where("id", $req->pedido_id)->with("productos")->with("user")->with('direccion_table')->get();
 
